@@ -44,7 +44,33 @@
 
 <p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 
-<p>test</p>
+<div id="whatsapp" style="padding-left:40px; display:none;"><a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="https://secure.avaaz.org/en/whatsapptest/?wh" class="wa_btn wa_btn_l action" style="display:none;-webkit-transform: skew(-18deg);transform: skewX(-18deg);font-size: 1.2em;width:125px;padding-left: 60px;margin-left:10px;font-weight:bold;background-size:15%;background-position:15% 50%;height:35px;padding-top:15px;" id="wa-tst-pa"><span>Whatsapp</span></a><span class="share label" id="wh-label">Share this campaign on Whatsapp</span></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+ if (typeof wabtn4fg === "undefined") {
+  wabtn4fg = 1; 
+  h = document.head || document.getElementsByTagName("head")[0]; 
+  s=document.createElement("script"); 
+  s.type="text/javascript"; 
+  s.src="https://avaazdev.s3.amazonaws.com/whatsapp-button.js"; 
+  h.appendChild(s); 
+  }
+ setTimeout( 
+          function() { 
+           $('.counter').hide(); 
+           var whatsapp = $('#whatsapp'); 
+           $(".share[title='twitter']").parent().parent().append(whatsapp); 
+           whatsapp.show(); 
+           if ($('wa-t-pa').is(':visible')) { 
+            $('#wh-label').show(); 
+            } else { 
+             $('#wh-label').hide(); 
+             } 
+           }, 
+            2000); 
+});
+</script>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/albertolopez/whatsapp">Whatsapp</a> is maintained by <a href="https://github.com/albertolopez">albertolopez</a>.</span>
